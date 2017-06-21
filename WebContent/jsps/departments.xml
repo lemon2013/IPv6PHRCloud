@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="GB2312"?>
+<branch>
+	<section name="外科">
+		<department>普通外科</department>
+		<department>骨外科</department>
+		<department>心胸外科</department>
+		<department>心血管外科</department>
+		<department>泌尿外科</department>
+		<department>功能神经外科</department>
+		<department>整形外科</department>
+	</section>
+	<section name="内科">
+		<department>呼吸内科</department>
+		<department>心血管内科</department>
+		<department>消化内科</department>
+		<department>神经内科</department>
+		<department>内分泌科</department>
+		<department>肾病内科</department>
+	</section>
+	<section name="传染科">
+		<department>肝病科</department>
+		<department>艾滋病科</department>
+		<department>结核病</department>
+		<department>寄生虫</department>
+		
+	</section>
+	<section name="骨科">
+		<department>骨关节科</department>
+		<department>骨质疏松科</department>
+		<department>骨外科</department>
+		<department>脊柱外科</department>
+	</section>
+	<section name="五官科">
+		<department>口腔科</department>
+		<department>耳鼻咽喉科</department>
+		<department>眼科</department>
+	
+	</section>
+</branch>	

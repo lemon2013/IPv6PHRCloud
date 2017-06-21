@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+   <!-- 配置文件改了以后不用重新启动 -->
+   <constant name="struts.devMode" value="true"/>
+   <constant name="struts.ui.theme" value="simple"></constant>
+   <!-- 配置上传文件的总大小 -->
+   <constant name="struts.multipart.maxSize" value="209715200"/>
+   <!-- <constant name="struts.multipart.saveDir" value="/tmp"/>  -->
+  
+   <package name="user" namespace="/" extends="struts-default">
+   
+     	<action name="userAction_*" class="cn.action.UserAction" method="{1}">
+ 
+     		<result name="login">/jsps/login.jsp</result>
+     		<result name="logout">/jsps/logout.jsp</result>
+     		<result name="disk_user">/jsps/disk_user.jsp</result>
+     		<result name="right_user">/jsps/right_user.jsp</result>
+     		<result name="register_success">/jsps/register_success.jsp</result>
+     		<result name="error">/jsps/error.jsp</result>
+     	</action>
+    
+     	<action name="fileAction_*" class="cn.action.MyFileAction" method="{1}">
+     		<result name="to_rename">/jsps/FileRename.jsp</result>
+     		<result name="disk_user">/jsps/disk_user.jsp</result>
+     		<result name="right_user">/jsps/right_user.jsp</result>
+     		<result name="listAll" type="redirect">/fileAction_listAll</result>
+     		<result name="success" >/jsps/success.jsp</result>
+     		<result name="encrypterror" >/jsps/error_encrypt.jsp</result>
+     		<result name="error_decrypt" >/jsps/error_decrypt.jsp</result>
+     	</action>
+     	<action name="myFileExdAction_*" class="cn.action.MyFileExdAction" method="{1}">
+     		<result name="right_doctor">/jsps/right_doctor.jsp</result>
+     		<result name="disk_doctor" type="redirect">/jsps/disk_doctor.jsp</result>
+     	</action>
+     	<action name="doctorAction_*" class="cn.action.DoctorAction" method="{1}">
+     		<result name="login">/jsps/login.jsp</result>
+     		<result name="logout">/jsps/logout.jsp</result>
+     		<result name="disk_doctor">/jsps/disk_doctor.jsp</result>
+     		<result name="right_doctor">/jsps/right_doctor.jsp</result>
+     		<result name="listAll" type="redirect">/doctorAction_listAll</result>
+     		<result name="register_success">/jsps/register_success.jsp</result>
+     	</action>
+     	
+     
+   </package>  
+</struts>	
